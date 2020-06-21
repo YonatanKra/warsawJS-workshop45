@@ -1,4 +1,4 @@
-import bind from './bind';
+import {bind} from './bind';
 
 describe('bind', () => {
     it('should call the original function with arguments', () => {

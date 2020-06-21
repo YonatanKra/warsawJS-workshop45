@@ -1,3 +1,3 @@
-export default function apply(appliedFunction, ctx, ...args) {
+export function apply(appliedFunction, ctx, ...args) {
     return appliedFunction.call(ctx, ...args);
 }

@@ -1,4 +1,4 @@
-import apply from './apply';
+import {apply} from './apply';
 
 describe('apply', () => {
     it('should call the original function with arguments and return its result', () => {
