@@ -12,6 +12,11 @@ export function splice(arr: Array<any>, startingIndex?: number, elementsToRemove
         .filter(val => val??false);
 }
 
-export function shift(arr) {
-    return arr.filter((val, i) => i != 0);
+export function shift([first, ...arr]: Array<any>): Array<any> {
+    return arr;
 }
+
+export function pop(arr: Array<any>) {
+    return arr.filter((val, i) => i < arr.length - 1);
+}
+

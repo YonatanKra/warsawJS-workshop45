@@ -1,4 +1,4 @@
-import {push, splice, unshift, shift} from './array';
+import {push, splice, unshift, shift, pop} from './array';
 
 describe('array', () => {
     describe('push', () => {
@@ -64,6 +64,18 @@ describe('array', () => {
             const originalArray = [1, 2, 3, 4, 5];
             const expectedArray = [2, 3, 4, 5];
             const newArray = shift(originalArray);
+            expect(originalArray === newArray).toEqual(false);
+            expect(newArray.length).toEqual(expectedArray.length);
+            newArray.forEach((val, i) => expect(val).toEqual(expectedArray[i]));
+
+        });
+    });
+
+    describe('pop', () => {
+        it('should return an array with the last element removed', () => {
+            const originalArray = [1, 2, 3, 4, 5];
+            const expectedArray = [1, 2, 3, 4];
+            const newArray = pop(originalArray);
             expect(originalArray === newArray).toEqual(false);
             expect(newArray.length).toEqual(expectedArray.length);
             newArray.forEach((val, i) => expect(val).toEqual(expectedArray[i]));
